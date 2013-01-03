@@ -62,5 +62,9 @@ Special Head of Department Actions:
 - only he can approve-forward to Registrar.
 - receives NS from department members.
 
+Special Finance Officer Actions:
+- can only receive NS.
+- cannot reject NS.
+
 Notesheets:
 - not decided what a notesheet contents should be. *will update soon*
