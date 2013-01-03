@@ -1,0 +1,66 @@
+Legend:
+NS - Notesheet(s)
+WL - Watchlist(s)
+
+1. Goals
+
+a. Ability to create and forward NS to upper level members.
+c. Ablility to specify necessary level of approval for a NS.
+b. Ability to detect received-read status and notify this to the sender.
+c. Ability to approve-forward / reject-improve / reject-terminate by receiver.
+d. Ability to visually track the path of NS - as a chain.
+e. Ability to modify NS, and notify changes to everyone in the WL.
+
+2. Roles
+
+a. Admin 							(Level 0)
+b. Director 					(Level 1)
+c. Registrar 					(Level 2)
+d. Head of Department (Level 3)
+e. Professor 					(Level 4)
+f. Lecturer 					(Level 5)
+g. Assistants 				(Level 6)
+h. Finance Officer 		(Level F)
+
+3. Features
+
+Common Member Actions:
+- register
+- login logout
+- notification: everyone in WL gets an email notification for each action.
+- create: a new NS.
+- read: created NS, approve-forward NS, reject-terminate NS, WLed NS.
+- approve-forward: NS to a member at above level.
+- update-approve-forward: created or received NS.
+- reject-improve: send NS back to sender, with optional suggestions to improve.
+- reject-terminate: reject NS permanantly, with reason specified to WL.
+- add-to-WL: same level members. 
+- unlist-from-WL: if added to WL.
+- view-members: see a list of all members.
+
+Special Admin Actions:
+- universal-member: belongs to everywhere.
+- universal-spectate: in WL of every NS.
+- universal-moderate: update/remove members and remove NS at every level.
+- can create new department if required.
+- can change department and level of member if required.
+
+Special Base Sender Actions:
+- archive: created NS, reject-terminated NS.
+- update: created NS, reject-improve requested NS.
+- cannot reject self made notesheet. only archive.
+
+Special Director Actions:
+- only he can approve-forward to Level F.
+- receives NS only from Registrar.
+
+Special Registrar Actions:
+- only he can approve-forward to Director.
+- receives NS only from HODs.
+
+Special Head of Department Actions:
+- only he can approve-forward to Registrar.
+- receives NS from department members.
+
+Notesheets:
+- not decided what a notesheet contents should be. *will update soon*
