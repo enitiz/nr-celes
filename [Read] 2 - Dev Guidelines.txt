@@ -35,9 +35,20 @@ Rearrange the cards in the order that you'd like to tackle the stories.
 - write the code. 
 - test the code, until everything passes.
 
+
 6. Accept the story
 
 - Is the story acceptable? Does it do what you wanted it to? If not, you need to go back and make it work the way it was supposed to.
 - Do all your tests pass? You didn't break the build, did you? If so, you need to fix what you broke.
 
-6. Repeat until done
+7. Repeat until done
+
+8. Fill the content
+
+Time for the boring part: loading all of the content provided by the client or writer. Although mundane, don’t misstep here, because even the simplest of pages demand tight typography and careful attention to detail.
+
+9. Test and verify links and functionality.
+
+This is a good time for a full website review. Using your file manager as a guide, walk through every single page you’ve created—everything from the home page to the submission confirmation page—and make sure everything is in working order and that you haven’t missed anything visually or functionally.
+
+
