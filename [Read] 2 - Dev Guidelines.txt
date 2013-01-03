@@ -1,0 +1,43 @@
+Development Guidelines
+------
+
+Many thanks to Lee Edwards http://www.quora.com/Ruby-on-Rails/Whats-an-efficient-web-app-development-process
+
+1. Write down a List of Roles, Goals and Features.	
+ 
+- Goals - what goals of the whole project are - business and otherwise. To decide what features are important.
+- Roles - who is going to use the site - visitors, logged in members, admins? Do different people have different views of the same information on the site?
+- Features - what are the basic categories of interaction on the site? For example: Users: registration, using the forums, and blogging; Admins: moderating the user content
+
+2. Write a list of stories
+
+A story is different than a feature because it represents a single thread of interaction from a particular user's perspective.
+It's common to express stories in form "As a ____ I want to ____ so that I can _____." 
+This forces you answer three important questions - Who is this for? What do they want to do? Why do they want to do it?
+If you can't complete a story in this form, it's likely that you don't have an answer to one of these three questions yet, so you'll need to do some thinking to get the answers before the story is actionable.
+Ex: "As an admin, I want to ban users from the forum, So that I can improve the quality of user-submitted content on the site.
+Write these stories down on notecards. This will help you in estimation and prioritization.
+
+3. Estimate the stories
+
+Estimation is a huge topic in itself, but the basic idea is to associate a particular level of effort with each story.
+The most common scales are 0/1/2/3/4, 0/1/2/4/8. I don't think this is incredibly important, but pick something and stick with it.
+Your goal here is to differentiate things that are low in effort, from stories that are high in effort.
+
+4. Prioritize the stories
+
+Rearrange the cards in the order that you'd like to tackle the stories.
+
+5. Test-drive the first story to completion
+
+- write a to-do for the story.
+- wireframe the UI.
+- write the code. 
+- test the code, until everything passes.
+
+6. Accept the story
+
+- Is the story acceptable? Does it do what you wanted it to? If not, you need to go back and make it work the way it was supposed to.
+- Do all your tests pass? You didn't break the build, did you? If so, you need to fix what you broke.
+
+6. Repeat until done
