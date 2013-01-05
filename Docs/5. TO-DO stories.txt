@@ -27,12 +27,11 @@ NONE
 
 Ongoing
 ---------
-NONE
+- [1] [wire] As an "unlogged user" I want to "register" so that I can "be allowed to use the app".
 
 TO-DO
 ---------
 
-- [1] As an "unlogged user" I want to "register" so that I can "be allowed to use the app".
 - [1] As an "unlogged user" I want to "login" so that I can "get identified and use the app".
 
 - [3] As an "unlogged user" I want to "see About/FAQ page" so that I can "know more about the app".
