@@ -1,0 +1,100 @@
+Here is the job/story list.
+
+NS = NoteSheet(s)
+WL = WatchList(s)
+
+Priority
+--------
+[1] - High (essential - app won't work without it)
+[2] - Lower
+[3] - Lowest (can be left - app will still work)
+
+() - work underway
+[] - work complete
+
+ui - making/gluing user interface
+code - coding the backed.
+test - testing job/story functionality
+
+
+Move the job to appropriate sections and use tags as specified above.
+
+
+Completed
+---------
+NONE
+
+Ongoing
+---------
+NONE
+
+TO-DO
+---------
+
+- [1] As an "unlogged user" I want to "register" so that I can "be allowed to use the app".
+- [1] As an "unlogged user" I want to "login" so that I can "get identified and use the app".
+
+- [3] As an "unlogged user" I want to "see About/FAQ page" so that I can "know more about the app".
+- [3] As an "unlogged user" I want to "view contact info" so that I can "contact personnels in regard to web app".
+
+- [1] As a "member" I want to "logout" so that I can "quit the app safely".
+- [1] As a "member" I want to "change password" so that I can "recover/secure my account".
+- [1] As a "member" I want to "add my info" so that I can "include more about me".
+- [1] As a "member" I want to "edit my info" so that I can "change my details, except department and level which is done by admin".
+
+- [1] As a "member" I want to "create new NS" so that I can "make a new NS and forward it later".
+- [1] As a "member" I want to "receive a NS" so that I can "automatically get a NS from lower members".
+
+- [2] As a "member" I want to "confirm being added to a WL" so that I can "approve that I am going to be added to a WL by others".
+- [3] As a "member" I want to "see a list of all members" so that I can "know who else is using the app and their roles".
+
+- [1] As a "creator-sender" I want to "view created NS" so that I can "see how my notesheet looks before sending them".
+- [1] As a "creator-sender" I want to "edit created NS" so that I can "remove my created NS that I have not and do not want to forward".
+
+- [1] As a "creator-sender" I want to "forward created NS" so that I can "send my notesheet to upper level".
+- [1] As a "creator-sender" I want to "archive created NS" so that I can "remove my created NS that I have not and do not want to forward".
+
+- [1] As a "creator-sender" I want to "archive reject-terminated NS" so that I can "no longer act on a fully rejected NS".
+- [1] As a "creator-sender" I want to "edit reject-terminated NS" so that I can "improve a partially rejected NS".
+- [1] As a "creator-sender" I do not want to "reject self created NS" so that I can "not reject my own NS, i can archive it until forwarded".
+
+- [1] As a "creator-sender" I want to "be automatically added to NS WL" so that I can "follow the NS story".
+- [1] As a "creator-sender" I want to "be mailed stories NS" so that I can "track all the activities of the particular NS".
+- [1] As a "creator-sender" I do not want to "get deltisted from WL" so that I can "not accidently remove myself from WL".
+
+- [1] As a "NS receiver" I want to "be automatically added to NS WL" so that I can "follow the NS story".
+- [1] As a "NS receiver" I want to "be mailed stories NS" so that I can "track all the activities of the particular NS".
+- [1] As a "NS receiver" I do not want to "delist me from WL" so that I can "not accidently remove myself from WL".
+
+- [1] As a "NS receiver" I want to "approve-forward received NS" so that I can "forward NS to upper level if i am satisfied with it".
+- [1] As a "NS receiver" I want to "reject-improve received NS" so that I can "send NS back and suggest improvements".
+- [1] As a "NS receiver" I want to "reject-terminate reveived NS" so that I can "stop activity of NS when I am not satisfied with it, and specify the reason".
+
+- [2] As a "non-contributing WLed member" I want to "view NS and stories" so that I can "see who is doing what on the NS via stories".
+- [2] As a "non-contributing WLed member" I want to "be mailed stories NS" so that I can "track all the activities of the particular NS".
+- [2] As a "non-contributing WLed member" I want to "delist myself from WL" so that I can "remove myself from the WL if necessary".
+
+- [1] As an "admin" I want to "verify a new registration" so that I can "check if a new member is really who he says to be, beofre he joins app".
+
+- [1] As an "admin" I want to "be included in every departmental level" so that I can "not be restricted to browse any part of the app".
+- [1] As an "admin" I want to "be in WL of every NS in app" so that I can "take actions swiftly when required without being locked out".
+
+- [1] As an "admin" I want to "create new department" so that I can "create a new department when required".
+
+- [2] As an "admin" I want to "remove any member" so that I can "remove the member if he is unable to do so".
+- [2] As an "admin" I want to "change member level and department" so that I can "manage changes in the personnel info once populated".
+
+- [2] As a "HoD" I want to "receive NS only from my department professors" so that I can "only have NS from my department".
+- [2] As a "HoD" I want to "exclusively approve-forward a received NS to registrar" so that I can "only I can bother the registrar".
+- [2] As a "HoD" I want to "exclusively forward a NS to registrar" so that I can "only I can bother the registrar".
+
+- [2] As a "registrar" I want to "receive NS only from HoDs" so that I can "only HoDs can bother me".
+- [2] As a "registrar" I want to "exclusively approve-forward a received NS to director" so that I can "only I can bother the director".
+- [2] As a "registrar" I want to "exclusively forward a NS to director" so that I can "only I can bother the director".
+
+- [2] As a "director" I want to "receive NS only from registrar" so that I can "only registrar can bother me".
+- [2] As a "director" I want to "exclusively approve-forward a received NS to Finance Officer" so that I can "only I can bother the FO".
+- [2] As a "director" I want to "exclusively forward a NS to Finance Officer" so that I can "only I can bother the FO".
+
+- [2] As a "FO" I want to "receive NS only from director" so that I can "only director can order me".
+- [2] As a "FO" I do not want to "create or forward a NS" so that I can "only take orders and real life actions".
