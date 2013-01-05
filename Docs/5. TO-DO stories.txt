@@ -27,7 +27,7 @@ NONE
 
 Ongoing
 ---------
-- [1] [wire] As an "unlogged user" I want to "register" so that I can "be allowed to use the app".
+- [1] [wire] (ui) As an "unlogged user" I want to "register" so that I can "be allowed to use the app".
 
 TO-DO
 ---------
