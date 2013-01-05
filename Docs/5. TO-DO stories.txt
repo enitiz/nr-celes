@@ -12,6 +12,7 @@ Priority
 () - work underway
 [] - work complete
 
+wire - making a temporary wireframe
 ui - making/gluing user interface
 code - coding the backed.
 test - testing job/story functionality
