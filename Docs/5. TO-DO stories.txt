@@ -25,10 +25,14 @@ Completed
 ---------
 NONE
 
+
 Ongoing
 ---------
 - [1] [wire] [ui] As an "unlogged user" I want to "register" so that I can "be allowed to use the app".
-- [1] (wire) As an "unlogged user" I want to "login" so that I can "get identified and use the app".
+- [1] [wire] [ui] As an "unlogged user" I want to "login" so that I can "get identified and use the app".
+- [3] [wire] [ui] As a "member" I want to "see a list of all members" so that I can "know who else is using the app, their roles and address".
+
+
 TO-DO
 ---------
 
@@ -44,7 +48,7 @@ TO-DO
 - [1] As a "member" I want to "receive a NS" so that I can "automatically get a NS from lower members".
 
 - [2] As a "member" I want to "confirm being added to a WL" so that I can "approve that I am going to be added to a WL by others".
-- [3] As a "member" I want to "see a list of all members" so that I can "know who else is using the app and their roles".
+
 
 - [1] As a "creator-sender" I want to "view created NS" so that I can "see how my notesheet looks before sending them".
 - [1] As a "creator-sender" I want to "edit created NS" so that I can "remove my created NS that I have not and do not want to forward".
