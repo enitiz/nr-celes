@@ -33,12 +33,66 @@
 									<s:div styleClass="input-control text">
 										<h:inputText type="text" value="#{member.password}" />
 									</s:div>
+									<h2>Position</h2>
+									<s:div styleClass="input-control select">
+										<h:selectOneMenu value="#{member.position}">
+											<f:selectItem itemLabel="Staff or Assistant" itemValue="6" />
+											<f:selectItem itemLabel="Lecturer" itemValue="5" />
+											<f:selectItem itemLabel="Professor" itemValue="4" />
+											<f:selectItem itemLabel="Head of Department" itemValue="3" />
+											<f:selectItem itemLabel="Registrar" itemValue="2" />
+											<f:selectItem itemLabel="Director" itemValue="1" />
+											<f:selectItem itemLabel="Finance Officer" itemValue="F" />
+										</h:selectOneMenu>
+									</s:div>
+									<h2>Department</h2>
+									<s:div styleClass="input-control select">
+										<h:selectOneMenu value="#{member.department}">
+											<f:selectItem itemLabel="Applied Geology"
+												itemValue="Applied Geology" />
+											<f:selectItem itemLabel="Applied Mechanics"
+												itemValue="Applied Mechanics" />
+											<f:selectItem itemLabel="Architecture"
+												itemValue="Architecture" />
+											<f:selectItem itemLabel="Bio Medical Engineering"
+												itemValue="Bio Medical Engineering" />
+											<f:selectItem itemLabel="Bio Technology"
+												itemValue="Bio Technology" />
+											<f:selectItem itemLabel="Chemical Engineering"
+												itemValue="Chemical Engineering" />
+											<f:selectItem itemLabel="Civil Engineering"
+												itemValue="Civil Engineering" />
+											<f:selectItem itemLabel="Computer Science and Engineering"
+												itemValue="Computer Science and Engineering" />
+											<f:selectItem itemLabel="Department of Chemistry"
+												itemValue="Department of Chemistry" />
+											<f:selectItem itemLabel="Department of Mathematics"
+												itemValue="Department of Mathematics" />
+											<f:selectItem itemLabel="Department of Physics"
+												itemValue="Department of Physics" />
+											<f:selectItem itemLabel="Department of English"
+												itemValue="Department of English" />
+											<f:selectItem itemLabel="Electrical Engineering"
+												itemValue="Electrical Engineering" />
+											<f:selectItem itemLabel="Electronics and Telecom. Engineering"
+												itemValue="Electronics and Telecom. Engineering" />
+											<f:selectItem itemLabel="Information Technology"
+												itemValue="Information Technology" />
+											<f:selectItem itemLabel="Master In Computer Application"
+												itemValue="Master In Computer Application" />
+											<f:selectItem itemLabel="Mechanical Engineering"
+												itemValue="Mechanical Engineering" />
+											<f:selectItem itemLabel="Metallurgical Engineering"
+												itemValue="Metallurgical Engineering" />
+											<f:selectItem itemLabel="Workshop" itemValue="Workshop" />
+										</h:selectOneMenu>
+									</s:div>
 								</s:div>
 							</s:div>
 							<s:div styleClass="row">
 								<s:div styleClass="span3">
 									<h:commandButton styleClass="button default"
-										action="#{register.addMember}" value="Request Membership"/>
+										action="#{register.addMember}" value="Request Membership" />
 								</s:div>
 								<s:div styleClass="span5">
 									<h:commandButton styleClass="button" value="Cancel" />

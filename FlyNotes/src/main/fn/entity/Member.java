@@ -20,6 +20,8 @@ public class Member implements java.io.Serializable {
 	private String name;
 	private String password;
 	private String email;
+	private String position;
+	private String department;
 
 	@Id
 	@Column(name = "id", unique = true, nullable = false)
@@ -34,7 +36,7 @@ public class Member implements java.io.Serializable {
 	}
 
 	@Column(name = "name", length = 45)
-	@Length(max = 45)
+	@Length(max = 100)
 	public String getName() {
 		return this.name;
 	}
@@ -50,15 +52,17 @@ public class Member implements java.io.Serializable {
 		this.id = id;
 	}
 	
-	public Member(int id, String name, String email, String password) {
+	public Member(int id, String name, String email, String password, String position, String department) {
 		this.id = id;
 		this.name = name;
-		this.setEmail(email);
+		this.email = email;
 		this.password = password;
+		this.position = position;
+		this.department = department;
 	}
 	
 	@Column(name="password", length = 45)
-	@Length(max=45)
+	@Length(max=100)
 	public String getPassword() {
 		return password;
 	}
@@ -74,6 +78,26 @@ public class Member implements java.io.Serializable {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	
+	@Column(name="position", length = 45)
+	@Length(max=100)
+	public String getPosition() {
+		return position;
+	}
+
+	public void setPosition(String position) {
+		this.position = position;
+	}
+	
+	@Column(name="department", length = 45)
+	@Length(max=100)
+	public String getDepartment() {
+		return department;
+	}
+
+	public void setDepartment(String department) {
+		this.department = department;
 	}
 
 }
