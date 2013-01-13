@@ -52,7 +52,7 @@ public class Member implements java.io.Serializable {
 
 	@Column(name = "password", length = 45)
 	@Length(max = 100, min = 6, message = "At least 6 characters required")
-	@Pattern(regex="^(?=.*[0-9])(?=.*[@#$%^&+=])(?=\\S+$)$", message="At least 1 digit and 1 special character required" )
+	@Pattern(regex="^(?=.*[0-9])(?=.*[@#$%^&+=])(?=\\S+$).{6,}$", message="At least 1 digit and 1 special character required" )
 	@NotNull
 	public String getPassword() {
 		return password;

@@ -20,56 +20,61 @@
 				<s:div styleClass="page-region-content">
 					<s:div styleClass="grid">
 						<s:div styleClass="row">
-							<h:form id="search">
-								<fieldset>
+							<s:div styleClass="span12">
+								<h:form id="search">
+									<h4>Search member</h4>
 									<h:inputText id="searchString"
 										value="#{memberList.searchString}">
-										<a4j:support event="onkeyup"
+										<a4j:support event="onload"
 											actionListener="#{memberList.find}" reRender="searchResults" />
 									</h:inputText>
-									&#160;
-									<a4j:commandButton id="findMembers" value="Search"
+										&#160;
+										<a4j:commandButton id="findMembers" value="Search"
 										action="#{memberList.find}" reRender="searchResults" />
-									&#160;
-									<a4j:status>
+										&#160;
+										<a4j:status>
 										<f:facet name="start">
 											<h:graphicImage value="/img/spinner.gif" />
 										</f:facet>
 									</a4j:status>
 									<br />
 									<h:outputLabel for="pageSize">Maximum results:</h:outputLabel>
-									&#160;
-									<h:selectOneMenu value="#{memberList.pageSize}" id="pageSize">
+										&#160;
+										<h:selectOneMenu value="#{memberList.pageSize}" id="pageSize">
 										<f:selectItem itemLabel="5" itemValue="5" />
 										<f:selectItem itemLabel="10" itemValue="10" />
 										<f:selectItem itemLabel="20" itemValue="20" />
 									</h:selectOneMenu>
-								</fieldset>
-							</h:form>
-						</s:div>
-						<a4j:outputPanel id="searchResults">
-							<s:div styleClass="section">
-								<h:outputText value="No Members Found"
-									rendered="#{members != null and members.rowCount==0}" />
-								<h:dataTable id="members" value="#{members}" var="hot"
-									rendered="#{members.rowCount>0}">
-									<h:column>
-										<f:facet name="header">Name</f:facet>#{hot.name}
-        							</h:column>
-									<h:column>
-										<f:facet name="header">Email</f:facet>#{hot.email}
-        							</h:column>
-									<h:column>
-										<f:facet name="header">Position</f:facet>#{hot.position}
-        							</h:column>
-									<h:column>
-										<f:facet name="header">Department</f:facet>#{hot.department}
-        							</h:column>
-								</h:dataTable>
-								<s:link value="More results" action="#{memberList.nextPage}"
-									rendered="#{memberList.nextPageAvaliable}" />
+								</h:form>
 							</s:div>
-						</a4j:outputPanel>
+						</s:div>
+						<s:div styleClass="row">
+							<s:div styleClass="span12">
+								<a4j:outputPanel id="searchResults">
+									<s:div styleClass="section">
+										<h:outputText value="No Members Found"
+											rendered="#{members != null and members.rowCount==0}" />
+										<h:dataTable id="members" value="#{members}" var="hot"
+											rendered="#{members.rowCount>0}">
+											<h:column>
+												<f:facet name="header">Name</f:facet>#{hot.name}
+        							</h:column>
+											<h:column>
+												<f:facet name="header">Email</f:facet>#{hot.email}
+        							</h:column>
+											<h:column>
+												<f:facet name="header">Position</f:facet>#{hot.position}
+        							</h:column>
+											<h:column>
+												<f:facet name="header">Department</f:facet>#{hot.department}
+        							</h:column>
+										</h:dataTable>
+										<s:link value="More results" action="#{memberList.nextPage}"
+											rendered="#{memberList.nextPageAvaliable}" />
+									</s:div>
+								</a4j:outputPanel>
+							</s:div>
+						</s:div>
 					</s:div>
 				</s:div>
 			</s:div>
