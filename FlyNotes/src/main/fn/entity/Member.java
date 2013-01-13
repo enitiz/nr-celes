@@ -6,6 +6,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import org.hibernate.validator.Email;
 import org.hibernate.validator.Length;
 import org.hibernate.validator.NotNull;
 import org.hibernate.validator.Pattern;
@@ -39,7 +41,7 @@ public class Member implements java.io.Serializable {
 	@Column(name = "name", length = 45)
 	@Length(max = 100, min=4, message="At least 4 characters required")
 	@Pattern(regex = "^[a-zA-Z.-]+ [a-zA-Z.-]+", message = "Enter both first and last name")
-	@NotNull(message="Name is required")
+	@NotNull
 	public String getName() {
 		return this.name;
 	}
@@ -51,7 +53,7 @@ public class Member implements java.io.Serializable {
 	@Column(name = "password", length = 45)
 	@Length(max = 100, min = 6, message = "At least 6 characters required")
 	@Pattern(regex="^(?=.*[0-9])(?=.*[@#$%^&+=])(?=\\S+$)$", message="At least 1 digit and 1 special character required" )
-	@NotNull(message="Password is required")
+	@NotNull
 	public String getPassword() {
 		return password;
 	}
@@ -62,8 +64,8 @@ public class Member implements java.io.Serializable {
 
 	@Column(name = "email", length = 45)
 	@Length(max = 254)
-	@Pattern(regex="^[\\w.-]+@[\\w.-]+\\.[a-zA-Z]{2,4}$", message="Invalid email address")
-	@NotNull(message="Email address is required")
+	@Email
+	@NotNull
 	public String getEmail() {
 		return email;
 	}
@@ -74,7 +76,7 @@ public class Member implements java.io.Serializable {
 
 	@Column(name = "position", length = 45)
 	@Length(max = 100)
-	@NotNull(message="Position is required")
+	@NotNull
 	public String getPosition() {
 		return position;
 	}
@@ -85,7 +87,7 @@ public class Member implements java.io.Serializable {
 
 	@Column(name = "department", length = 45)
 	@Length(max = 100)
-	@NotNull(message="Department is required")
+	@NotNull
 	public String getDepartment() {
 		return department;
 	}
