@@ -8,7 +8,7 @@ WL = WatchList(s)
 - As an "Unlogged User" I want to "see About page" so that I can "know more about the app".
 - As an "Unlogged User" I want to "view contact info" so that I can "contact personnels in regard to web app".
 
-- As an "Unlogged User" I want to "register" so that I can "be allowed to use the app".
+- As an "Unlogged User" I want to "register" so that I can "become a member".
 - As an "Unlogged User" I want to "login" so that I can "get identified and use the app".
 
 2. Member (common)
@@ -19,6 +19,7 @@ WL = WatchList(s)
 - As a "member" I want to "edit my info" so that I can "change my details, except department and level which is done by admin".
 
 - As a "member" I want to "see a list of all members" so that I can "know who else is using the app and their roles".
+- As a "member" I want to "see a list of all my notesheets" so that I can "know my created, received or WLed notesheets".
 - As a "member" I want to "receive a NS" so that I can "automatically get a NS from lower members".
 - As a "member" I want to "confirm being added to a WL" so that I can "approve that I am going to be added to a WL by others".
 
@@ -33,7 +34,7 @@ WL = WatchList(s)
 - As a "creator-sender" I want to "archive created NS" so that I can "remove my created NS that I have not and do not want to forward".
 
 - As a "creator-sender" I want to "archive reject-terminated NS" so that I can "no longer act on a fully rejected NS".
-- As a "creator-sender" I want to "edit reject-terminated NS" so that I can "improve a partially rejected NS".
+- As a "creator-sender" I want to "edit reject-improve NS" so that I can "improve a partially rejected NS".
 - As a "creator-sender" I do not want to "reject self created NS" so that I can "not reject my own NS, i can archive it until forwarded".
 
 - As a "creator-sender" I want to "be automatically added to NS WL" so that I can "follow the NS story".
@@ -49,12 +50,13 @@ WL = WatchList(s)
 
 - As a "NS receiver" I want to "approve-forward received NS" so that I can "forward NS to upper level if i am satisfied with it".
 - As a "NS receiver" I want to "reject-improve received NS" so that I can "send NS back and suggest improvements".
-- As a "NS receiver" I want to "reject-terminate reveived NS" so that I can "stop activity of NS when I am not satisfied with it, and specify the reason".
+- As a "NS receiver" I want to "reject-terminate received NS" so that I can "stop activity of NS when I am not satisfied with it, and specify the reason".
 
 
 5. NS Non-Contributing WatchListed Member
 
 - As a "non-contributing WLed member" I want to "view NS and stories" so that I can "see who is doing what on the NS via stories".
+- As a "non-contributing WLed member" I want to "provide suggestions" so that I can "provide suggestions and act as pseudo-contributor".
 - As a "non-contributing WLed member" I want to "be mailed stories NS" so that I can "track all the activities of the particular NS".
 - As a "non-contributing WLed member" I want to "delist myself from WL" so that I can "remove myself from the WL if necessary".
 
@@ -94,4 +96,3 @@ WL = WatchList(s)
 
 - As a "FO" I want to "receive NS only from director" so that I can "only director can order me".
 - As a "FO" I do not want to "create or forward a NS" so that I can "only take orders and real life actions".
-

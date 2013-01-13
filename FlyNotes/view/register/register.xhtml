@@ -1,0 +1,120 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:s="http://jboss.com/products/seam/taglib"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:rich="http://richfaces.org/rich"
+	template="../layout/template.xhtml">
+
+	<ui:define name="body">
+		<s:div styleClass="page secondary">
+			<s:div styleClass="page-header">
+				<s:div styleClass="page-header-content">
+					<h1>Register</h1>
+				</s:div>
+			</s:div>
+			<s:div styleClass="page-region">
+				<s:div styleClass="page-region-content">
+					<s:div styleClass="grid">
+						<h:form>
+							<s:validateAll>
+								<s:div styleClass="row">
+									<s:div styleClass="span8">
+										<h2>Name</h2>
+										<s:div styleClass="input-control text">
+											<h:message styleClass="fg-color-red" for="name" />
+											<h:inputText id="name" type="text" value="#{member.name}" />
+										</s:div>
+										<h2>Email</h2>
+										<s:div styleClass="input-control text">
+											<h:message styleClass="fg-color-red" for="email" />
+											<h:inputText id="email" type="text" value="#{member.email}" />
+										</s:div>
+										<h2>New Password</h2>
+										<s:div styleClass="input-control text">
+											<h:message styleClass="fg-color-red" for="password" />
+											<h:inputText id="password" type="text"
+												value="#{member.password}" />
+										</s:div>
+										<h2>Position</h2>
+										<s:div styleClass="input-control select">
+											<h:message styleClass="fg-color-red" for="position" />
+											<h:selectOneMenu id="position" value="#{member.position}">
+												<f:selectItem itemLabel="Staff or Assistant"
+													itemValue="Staff or Assistant" />
+												<f:selectItem itemLabel="Lecturer" itemValue="Lecturer" />
+												<f:selectItem itemLabel="Professor" itemValue="Professor" />
+												<f:selectItem itemLabel="Head of Department"
+													itemValue="Head of Department" />
+												<f:selectItem itemLabel="Registrar" itemValue="Registrar" />
+												<f:selectItem itemLabel="Director" itemValue="Director" />
+												<f:selectItem itemLabel="Finance Officer"
+													itemValue="Finance Officer" />
+											</h:selectOneMenu>
+										</s:div>
+										<h2>Department</h2>
+										<s:div styleClass="input-control select">
+											<h:message styleClass="fg-color-red" for="department" />
+											<h:selectOneMenu id="department" value="#{member.department}">
+												<f:selectItem itemLabel="Applied Geology"
+													itemValue="Applied Geology" />
+												<f:selectItem itemLabel="Applied Mechanics"
+													itemValue="Applied Mechanics" />
+												<f:selectItem itemLabel="Architecture"
+													itemValue="Architecture" />
+												<f:selectItem itemLabel="Bio Medical Engineering"
+													itemValue="Bio Medical Engineering" />
+												<f:selectItem itemLabel="Bio Technology"
+													itemValue="Bio Technology" />
+												<f:selectItem itemLabel="Chemical Engineering"
+													itemValue="Chemical Engineering" />
+												<f:selectItem itemLabel="Civil Engineering"
+													itemValue="Civil Engineering" />
+												<f:selectItem itemLabel="Computer Science and Engineering"
+													itemValue="Computer Science and Engineering" />
+												<f:selectItem itemLabel="Department of Chemistry"
+													itemValue="Department of Chemistry" />
+												<f:selectItem itemLabel="Department of Mathematics"
+													itemValue="Department of Mathematics" />
+												<f:selectItem itemLabel="Department of Physics"
+													itemValue="Department of Physics" />
+												<f:selectItem itemLabel="Department of English"
+													itemValue="Department of English" />
+												<f:selectItem itemLabel="Electrical Engineering"
+													itemValue="Electrical Engineering" />
+												<f:selectItem
+													itemLabel="Electronics and Telecom. Engineering"
+													itemValue="Electronics and Telecom. Engineering" />
+												<f:selectItem itemLabel="Information Technology"
+													itemValue="Information Technology" />
+												<f:selectItem itemLabel="Master In Computer Application"
+													itemValue="Master In Computer Application" />
+												<f:selectItem itemLabel="Mechanical Engineering"
+													itemValue="Mechanical Engineering" />
+												<f:selectItem itemLabel="Metallurgical Engineering"
+													itemValue="Metallurgical Engineering" />
+												<f:selectItem itemLabel="Workshop" itemValue="Workshop" />
+											</h:selectOneMenu>
+										</s:div>
+									</s:div>
+								</s:div>
+								<s:div styleClass="row">
+									<s:div styleClass="span3">
+										<h:commandButton styleClass="button default"
+											action="#{register.addMember}" value="Request Membership" />
+									</s:div>
+									<s:div styleClass="span5">
+										<h:commandButton styleClass="button" value="Cancel" />
+									</s:div>
+								</s:div>
+							</s:validateAll>
+						</h:form>
+					</s:div>
+
+				</s:div>
+			</s:div>
+		</s:div>
+	</ui:define>
+</ui:composition>

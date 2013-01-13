@@ -1,0 +1,74 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:s="http://jboss.com/products/seam/taglib"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:rich="http://richfaces.org/rich"
+	template="../layout/template.xhtml"
+	xmlns:a4j="http://richfaces.org/a4j">
+
+	<ui:define name="body">
+		<s:div styleClass="page secondary">
+			<s:div styleClass="page-header">
+				<s:div styleClass="page-header-content">
+					<h1>Members</h1>
+				</s:div>
+			</s:div>
+			<s:div styleClass="page-region">
+				<s:div styleClass="page-region-content">
+					<s:div styleClass="grid">
+						<s:div styleClass="row">
+							<s:div styleClass="span12">
+								<h:form id="search">
+									<h3>Search</h3>
+									<h:inputText id="searchString"
+										value="#{memberList.searchString}">
+										<a4j:support event="onkeyup"
+											actionListener="#{memberList.find}" reRender="searchResults" />
+									</h:inputText>
+									&#160;
+									&#160;
+									<a4j:status>
+										<f:facet name="start">
+											<h:graphicImage value="/img/spinner.gif" height="16"
+												width="16" />
+										</f:facet>
+									</a4j:status>
+								</h:form>
+							</s:div>
+						</s:div>
+						<s:div styleClass="row">
+							<s:div styleClass="span12">
+								<a4j:outputPanel id="searchResults">
+									<s:div styleClass="section">
+										<h:outputText value="No Members Found"
+											rendered="#{members != null and members.rowCount==0}" />
+										<h:dataTable id="members" value="#{members}" var="hot"
+											rendered="#{members.rowCount>0}">
+											<h:column>
+												<f:facet name="header">Name</f:facet>#{hot.name}
+        							</h:column>
+											<h:column>
+												<f:facet name="header">Email</f:facet>#{hot.email}
+        							</h:column>
+											<h:column>
+												<f:facet name="header">Position</f:facet>#{hot.position}
+        							</h:column>
+											<h:column>
+												<f:facet name="header">Department</f:facet>#{hot.department}
+        							</h:column>
+										</h:dataTable>
+										<s:link value="More results" action="#{memberList.nextPage}"
+											rendered="#{memberList.nextPageAvaliable}" />
+									</s:div>
+								</a4j:outputPanel>
+							</s:div>
+						</s:div>
+					</s:div>
+				</s:div>
+			</s:div>
+		</s:div>
+	</ui:define>
+</ui:composition>
