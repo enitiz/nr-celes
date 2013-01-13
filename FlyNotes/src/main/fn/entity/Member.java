@@ -1,11 +1,17 @@
 package fn.entity;
 
+import java.io.UnsupportedEncodingException;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.util.Random;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 import org.hibernate.validator.Email;
 import org.hibernate.validator.Length;
@@ -22,6 +28,7 @@ public class Member implements java.io.Serializable {
 
 	private String name;
 	private String password;
+	private byte[] hash;
 	private String email;
 	private String position;
 	private String department;
@@ -39,7 +46,7 @@ public class Member implements java.io.Serializable {
 	}
 
 	@Column(name = "name", length = 45)
-	@Length(max = 100, min=4, message="At least 4 characters required")
+	@Length(max = 100, min = 4, message = "At least 4 characters required")
 	@Pattern(regex = "^[a-zA-Z.-]+ [a-zA-Z.-]+", message = "Enter both first and last name")
 	@NotNull
 	public String getName() {
@@ -49,10 +56,10 @@ public class Member implements java.io.Serializable {
 	public void setName(String name) {
 		this.name = name;
 	}
-
-	@Column(name = "password", length = 45)
+	
+	@Transient
 	@Length(max = 100, min = 6, message = "At least 6 characters required")
-	@Pattern(regex="^(?=.*[0-9])(?=.*[@#$%^&+=])(?=\\S+$).{6,}$", message="At least 1 digit and 1 special character required" )
+	@Pattern(regex = "^(?=.*[0-9])(?=.*[@#$%^&+=])(?=\\S+$).{6,}$", message = "At least 1 digit and 1 special character required")
 	@NotNull
 	public String getPassword() {
 		return password;
@@ -60,6 +67,15 @@ public class Member implements java.io.Serializable {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	
+	@Column(name="hash")
+	public byte[] getHash() {
+		return hash;
+	}
+
+	public void setHash(byte[] hash) {
+		this.hash = hash;
 	}
 
 	@Column(name = "email", length = 45)
@@ -112,5 +128,4 @@ public class Member implements java.io.Serializable {
 		this.position = position;
 		this.department = department;
 	}
-
 }

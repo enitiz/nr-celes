@@ -84,4 +84,24 @@ public class MemberListAction implements MemberList {
 	@Remove
 	public void destroy() {
 	}
+
+	@Override
+	public int memberRank(String position) {
+		if (position.equals("Administrator"))
+			return 1;
+		else if (position.equals("Director"))
+			return 2;
+		else if (position.equals("Registrar"))
+			return 3;
+		else if (position.equals("Head of Department"))
+			return 4;
+		else if (position.equals("Professor"))
+			return 5;
+		else if (position.equals("Lecturer"))
+			return 6;
+		else if (position.equals("Staff or Assistant"))
+			return 7;
+		else
+			return 0;
+	}
 }

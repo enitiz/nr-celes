@@ -26,4 +26,6 @@ public interface MemberList {
 
 	void nextPage();
 
+	int memberRank(String position);
+
 }
