@@ -8,6 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import org.hibernate.validator.Length;
 import org.hibernate.validator.NotNull;
+import org.hibernate.validator.Pattern;
 import org.jboss.seam.annotations.Name;
 
 @Entity
@@ -36,7 +37,9 @@ public class Member implements java.io.Serializable {
 	}
 
 	@Column(name = "name", length = 45)
-	@Length(max = 100)
+	@Length(max = 100, min=4, message="At least 4 characters required")
+	@Pattern(regex = "^[a-zA-Z.-]+ [a-zA-Z.-]+", message = "Enter both first and last name")
+	@NotNull(message="Name is required")
 	public String getName() {
 		return this.name;
 	}
@@ -45,24 +48,10 @@ public class Member implements java.io.Serializable {
 		this.name = name;
 	}
 
-	public Member() {
-	}
-
-	public Member(int id) {
-		this.id = id;
-	}
-	
-	public Member(int id, String name, String email, String password, String position, String department) {
-		this.id = id;
-		this.name = name;
-		this.email = email;
-		this.password = password;
-		this.position = position;
-		this.department = department;
-	}
-	
-	@Column(name="password", length = 45)
-	@Length(max=100)
+	@Column(name = "password", length = 45)
+	@Length(max = 100, min = 6, message = "At least 6 characters required")
+	@Pattern(regex="^(?=.*[0-9])(?=.*[@#$%^&+=])(?=\\S+$)$", message="At least 1 digit and 1 special character required" )
+	@NotNull(message="Password is required")
 	public String getPassword() {
 		return password;
 	}
@@ -70,8 +59,11 @@ public class Member implements java.io.Serializable {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	@Column(name="email", length = 45)
-	@Length(max=254)
+
+	@Column(name = "email", length = 45)
+	@Length(max = 254)
+	@Pattern(regex="^[\\w.-]+@[\\w.-]+\\.[a-zA-Z]{2,4}$", message="Invalid email address")
+	@NotNull(message="Email address is required")
 	public String getEmail() {
 		return email;
 	}
@@ -79,9 +71,10 @@ public class Member implements java.io.Serializable {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
-	@Column(name="position", length = 45)
-	@Length(max=100)
+
+	@Column(name = "position", length = 45)
+	@Length(max = 100)
+	@NotNull(message="Position is required")
 	public String getPosition() {
 		return position;
 	}
@@ -89,14 +82,32 @@ public class Member implements java.io.Serializable {
 	public void setPosition(String position) {
 		this.position = position;
 	}
-	
-	@Column(name="department", length = 45)
-	@Length(max=100)
+
+	@Column(name = "department", length = 45)
+	@Length(max = 100)
+	@NotNull(message="Department is required")
 	public String getDepartment() {
 		return department;
 	}
 
 	public void setDepartment(String department) {
+		this.department = department;
+	}
+
+	public Member() {
+	}
+
+	public Member(int id) {
+		this.id = id;
+	}
+
+	public Member(int id, String name, String email, String password,
+			String position, String department) {
+		this.id = id;
+		this.name = name;
+		this.email = email;
+		this.password = password;
+		this.position = position;
 		this.department = department;
 	}
 

@@ -19,35 +19,41 @@
 				<s:div styleClass="page-region-content">
 					<s:div styleClass="grid">
 						<h:form>
+						<s:validateAll>
 							<s:div styleClass="row">
 								<s:div styleClass="span8">
 									<h2>Name</h2>
 									<s:div styleClass="input-control text">
-										<h:inputText type="text" value="#{member.name}" />
+										<h:message for="name"/>
+										<h:inputText id="name" type="text" value="#{member.name}" />
 									</s:div>
 									<h2>Email</h2>
 									<s:div styleClass="input-control text">
-										<h:inputText type="text" value="#{member.email}" />
+										<h:message for="email"/>
+										<h:inputText id="email" type="text" value="#{member.email}" />
 									</s:div>
 									<h2>New Password</h2>
 									<s:div styleClass="input-control text">
-										<h:inputText type="text" value="#{member.password}" />
+										<h:message for="password"/>
+										<h:inputText id="password" type="text" value="#{member.password}" />
 									</s:div>
 									<h2>Position</h2>
 									<s:div styleClass="input-control select">
-										<h:selectOneMenu value="#{member.position}">
-											<f:selectItem itemLabel="Staff or Assistant" itemValue="6" />
-											<f:selectItem itemLabel="Lecturer" itemValue="5" />
-											<f:selectItem itemLabel="Professor" itemValue="4" />
-											<f:selectItem itemLabel="Head of Department" itemValue="3" />
-											<f:selectItem itemLabel="Registrar" itemValue="2" />
-											<f:selectItem itemLabel="Director" itemValue="1" />
-											<f:selectItem itemLabel="Finance Officer" itemValue="F" />
+										<h:message for="position"/>
+										<h:selectOneMenu id="position" value="#{member.position}">
+											<f:selectItem itemLabel="Staff or Assistant" itemValue="Staff or Assistant" />
+											<f:selectItem itemLabel="Lecturer" itemValue="Lecturer" />
+											<f:selectItem itemLabel="Professor" itemValue="Professor" />
+											<f:selectItem itemLabel="Head of Department" itemValue="Head of Department" />
+											<f:selectItem itemLabel="Registrar" itemValue="Registrar" />
+											<f:selectItem itemLabel="Director" itemValue="Director" />
+											<f:selectItem itemLabel="Finance Officer" itemValue="Finance Officer" />
 										</h:selectOneMenu>
 									</s:div>
 									<h2>Department</h2>
 									<s:div styleClass="input-control select">
-										<h:selectOneMenu value="#{member.department}">
+										<h:message for="department"/>
+										<h:selectOneMenu id="department" value="#{member.department}">
 											<f:selectItem itemLabel="Applied Geology"
 												itemValue="Applied Geology" />
 											<f:selectItem itemLabel="Applied Mechanics"
@@ -74,7 +80,8 @@
 												itemValue="Department of English" />
 											<f:selectItem itemLabel="Electrical Engineering"
 												itemValue="Electrical Engineering" />
-											<f:selectItem itemLabel="Electronics and Telecom. Engineering"
+											<f:selectItem
+												itemLabel="Electronics and Telecom. Engineering"
 												itemValue="Electronics and Telecom. Engineering" />
 											<f:selectItem itemLabel="Information Technology"
 												itemValue="Information Technology" />
@@ -92,14 +99,16 @@
 							<s:div styleClass="row">
 								<s:div styleClass="span3">
 									<h:commandButton styleClass="button default"
-										action="#{register.addMember}" value="Request Membership" />
+										action="#{register.addMember}" value="Request Membership"/>
 								</s:div>
 								<s:div styleClass="span5">
 									<h:commandButton styleClass="button" value="Cancel" />
 								</s:div>
 							</s:div>
+							</s:validateAll>
 						</h:form>
 					</s:div>
+
 				</s:div>
 			</s:div>
 		</s:div>
