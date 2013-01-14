@@ -28,10 +28,10 @@ NONE
 
 Ongoing
 ---------
-- [1] [wire] [ui] (code) As an "unlogged user" I want to "register" so that I can "be allowed to use the app".
-- [1] [wire] [ui] (code) As an "unlogged user" I want to "login" so that I can "get identified and use the app".
-- [3] [wire] [ui] (code) As a "member" I want to "see a list of all members" so that I can "know who else is using the app, their roles and address".
-
+- [1] [wire] [ui] [code] As an "unlogged user" I want to "register" so that I can "be allowed to use the app".
+- [1] [wire] [ui] [code] As an "unlogged user" I want to "login" so that I can "get identified and use the app".
+- [3] [wire] [ui] [code] As a "member" I want to "see a list of all members" so that I can "know who else is using the app, their roles and address".
+- [3] [ui] As an "unlogged user" I want to "see Welcome page" so that I can "land to the app".
 
 TO-DO
 ---------

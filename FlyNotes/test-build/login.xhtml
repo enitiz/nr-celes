@@ -30,8 +30,7 @@
 										<h2>Password</h2>
 										<s:div styleClass="input-control text">
 											<h:message styleClass="fg-color-red" for="password" />
-											<h:inputText id="password" type="password"
-												value="#{credentials.password}" />
+											<h:inputSecret id="password" value="#{credentials.password}" />
 										</s:div>
 										<label class="input-control checkbox"> <h:selectBooleanCheckbox
 												id="rememberMe" value="#{identity.rememberMe}" /> <s:span
