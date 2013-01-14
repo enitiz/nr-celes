@@ -88,6 +88,8 @@ public class MemberListAction implements MemberList {
 	@Override
 	public int memberRank(String position) {
 		if (position.equals("Administrator"))
+			return 0;
+		else if (position.equals("Finance Officer"))
 			return 1;
 		else if (position.equals("Director"))
 			return 2;
@@ -102,6 +104,6 @@ public class MemberListAction implements MemberList {
 		else if (position.equals("Staff or Assistant"))
 			return 7;
 		else
-			return 0;
+			return 99;
 	}
 }

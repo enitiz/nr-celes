@@ -3,10 +3,8 @@ package fn.session;
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.util.Random;
 
 import javax.ejb.Remove;
-import javax.ejb.Stateful;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -28,7 +26,7 @@ public class RegisterAction implements Register {
 
 	public String addMember() {
 		try {
-			member.setHash(hash(member.getPassword()));
+			member.setHash(hash(member.getEmail(), member.getPassword()));
 		} catch (NoSuchAlgorithmException e) {
 			e.printStackTrace();
 		} catch (UnsupportedEncodingException e) {
@@ -38,13 +36,13 @@ public class RegisterAction implements Register {
 		return "/members/members.xhtml";
 	}
 
-	public byte[] hash(String password) throws NoSuchAlgorithmException, UnsupportedEncodingException {
-		byte[] salt = new byte[20];
-		new Random().nextBytes(salt);
+	public byte[] hash(String email, String password)
+			throws NoSuchAlgorithmException, UnsupportedEncodingException {
 		MessageDigest digest;
+		email = email.toLowerCase();
 		digest = MessageDigest.getInstance("SHA-256");
 		digest.reset();
-		digest.update(salt);
+		digest.update(email.getBytes("UTF-8"));
 		return digest.digest(password.getBytes("UTF-8"));
 	}
 
