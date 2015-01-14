@@ -1,4 +1,4 @@
-Flying Notes
+URD
 ------------
 
 #### A web app to create and share notesheets among college faculty and administration.
