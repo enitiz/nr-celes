@@ -1,12 +1,9 @@
-URD
+CELES
 ------------
 
 #### A web app to create and share notesheets among college faculty and administration.
 
-[![Build Status](https://travis-ci.org/ice1mind/FlyingNotes.png)](https://travis-ci.org/ice1mind/FlyingNotes)
-
 Details at [/Docs]
-Progress at [/Docs/5. TO-Do stories.txt]
 
 ##### Technologies
 
